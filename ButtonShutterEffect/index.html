@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Shutter Effect</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            position: relative;
+            border: none;
+            padding: .8rem 2.5rem;
+            font-size: 1.2rem;
+            transition: .4s ease-in;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        button:after {
+            position: absolute;
+            content: "";
+            z-index: -1;
+            height: 0;
+            left: 0;
+            top: 0;
+            transition-duration: .6s;
+            width: 100%;
+        }
+
+        button:hover::after {
+            background: #096c7a;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Button</button>
+</body>
+
+</html>

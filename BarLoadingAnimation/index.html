@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar Loading Animation</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            height: 100vh;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .loading{
+            width: 30rem;
+            height: 2rem;
+            border: 2px solid azure;
+            position: relative;
+        }
+        .loading::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: #02df02;
+            animation:  load 10s forwards;
+        }
+        @keyframes load{
+            5%{width: 5%;}
+            25%{width: 15%;}
+            40%{width: 30%;}
+            60%{width: 48%;}
+            75%{width: 67%;}
+            90%{width: 88%;}
+            100%{width: 100%;}
+        }
+    </style>
+</head>
+<body>
+    <div class="loading"></div>
+</body>
+</html>

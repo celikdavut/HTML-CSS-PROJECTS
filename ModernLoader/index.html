@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Loader</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .face-load {
+            display: flex;
+            width: 200px;
+            margin: 20% auto;
+        }
+
+        .face-load div {
+            width: 250px;
+            height: 100px;
+            border-radius: 1rem;
+            background: #00fffc;
+            margin-right: 5px;
+        }
+
+        .face-load>div:nth-child(1) {
+            animation: anim 1s -.4s infinite cubic-bezier(.2, .68, .18, 1.08);
+        }
+
+        .face-load>div:nth-child(2) {
+            animation: anim 1s -.3s infinite cubic-bezier(.2, .68, .18, 1.08);
+        }
+
+        .face-load>div:nth-child(3) {
+            animation: anim 1s -.2s infinite cubic-bezier(.2, .68, .18, 1.08);
+        }
+
+        .face-load>div:nth-child(4) {
+            animation: anim 1s -.1s infinite cubic-bezier(.2, .68, .18, 1.08);
+        }
+
+        .face-load>div:nth-child(5) {
+            animation: anim 1s 0s infinite cubic-bezier(.2, .68, .18, 1.08);
+        }
+
+        .face-load>div:nth-child(6) {
+            animation: anim 1s .1s infinite cubic-bezier(.2, .68, .18, 1.08);
+        }
+
+        @keyframes anim {
+
+            0%,
+            100% {
+                transform: scaleY(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scaleY(.4);
+                opacity: .1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="face-load">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>

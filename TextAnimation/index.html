@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Animation</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .typing {
+            color: white;
+            border-right: .1rem solid aqua;
+            font-size: 2rem;
+            width: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: anim steps(20, end) forwards infinite 6s;
+        }
+
+        @keyframes anim {
+            0% {
+                width: 0;
+            }
+
+            50% {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text-container">
+        <div class="typing">
+            Software
+        </div>
+    </div>
+</body>
+
+</html>

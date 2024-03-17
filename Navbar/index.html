@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        nav {
+            width: 100%;
+            box-shadow: 0 0 10px rgb(0 0 0 / 8%);
+            background: rgb(27, 27, 29);
+            position: relative;
+        }
+
+        .menu {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 4.5rem;
+        }
+
+        .menu li {
+            display: inline-block;
+            width: 16.5rem;
+            text-align: center;
+        }
+
+        .menu li:hover .submenu {
+            height: 4.3rem;
+        }
+
+        .menu>li:hover>a {
+            color: #3e95ff;
+            padding: 1.75rem 0;
+        }
+
+        .menu>li:hover>a::before {
+            visibility: visible;
+            scale: 1 1;
+        }
+
+        .submenu {
+            overflow: hidden;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background: #3e95ff;
+            height: 0;
+            transition: height .3s ease-in-out;
+        }
+
+        .menu li .submenu a {
+            color: #fff;
+            opacity: 0;
+            font-size: 1rem;
+            transition: opacity .25s;
+            height: 100%;
+            padding: 1.5rem 1rem;
+        }
+
+        .menu>li:hover .submenu a {
+            opacity: 1;
+        }
+
+        .menu>li .submenu a:hover {
+            background: rgb(0 0 0 / 20%);
+        }
+
+        .menu>li a {
+            color: #999;
+            position: relative;
+            height: 100%;
+        }
+
+        .menu>li>a::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            bottom: 3px;
+            left: 0;
+            background: #3e95ff;
+            transition: all .2s ease-in-out;
+            scale: 0 0;
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="">About</a></li>
+            <li><a href="">Works</a></li>
+            <li>
+                <a href="">Skills</a>
+                <ul class="submenu">
+                    <li><a href="">React</a></li>
+                    <li><a href="">Html</a></li>
+                    <li><a href="">Css</a></li>
+                </ul>
+            </li>
+            <li><a href="">Blogs</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Double Effect</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            position: relative;
+            border: none;
+            padding: .8rem 2.5rem;
+            font-size: 1.2rem;
+            transition: .4s ease-in;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        button:hover {
+            box-shadow: 10px 10px 0px #ff96ad;
+            top: -5px;
+            left: -5px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Button</button>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Hover Animation 4</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .bg {
+            background-color: #2C2C2C;
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
+
+        .button {
+            color: #fff;
+            cursor: pointer;
+            font-size: 1rem;
+            max-width: 10rem;
+            width: 100%;
+            height: 2.5rem;
+            font-weight: 600;
+            position: relative;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 1s ease-in;
+            padding: auto;
+        }
+
+        .button:hover {
+            color: #FF9950;
+        }
+
+        .button svg {
+            width: 100%;
+            height: 2.5rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .button rect {
+            fill: none;
+            stroke: #fff;
+            stroke-width: 2;
+            stroke-dasharray: 450, 0;
+            transition: all .5s linear;
+        }
+
+        .button:hover rect {
+            stroke-width: 5;
+            stroke-dasharray: 20, 300;
+            stroke-dashoffset: 48;
+            stroke: #FF9950;
+            transition: all 2s cubic-bezier(0.22, 1, 0.25, 1);
+        }
+    </style>
+</head>
+
+<body>
+    <span class="bg">
+        <a href="" class="button">
+            <svg>
+                <rect x="0" y="0" fill="none" width="100%" height="100%" />
+            </svg>
+            Hover
+        </a>
+    </span>
+</body>
+
+</html>

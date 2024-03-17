@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Hover Effect</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            width: 1000px;
+            height: 400px;
+            background: linear-gradient(to right, grey, orange);
+            box-shadow: 3px 3px 10px gold, -3px -3px 10px yellowgreen;
+            border-radius: .5rem;
+            transform: perspective(900px) rotateX(60deg) scale(0.7);
+            transition: .5s ease all;
+        }
+
+        .card:hover {
+            transform: rotate(0deg) scale(1) translateY(10px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card"></div>
+</body>
+
+</html>

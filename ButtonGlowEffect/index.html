@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Glow Effect</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            position: relative;
+            border: none;
+            padding: .8rem 2.5rem;
+            font-size: 1.2rem;
+            transition: .4s ease-in;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        button::before,
+        button::after {
+            position: absolute;
+            content: "";
+            z-index: -1;
+        }
+
+        button:hover {
+            background: #ff96ad;
+            box-shadow: 0 0 5px #ff96ad, 0 0 25px #ff96ad, 0 0 50px #ff96ad, 0 0 200px #ff96ad;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Button</button>
+</body>
+
+</html>

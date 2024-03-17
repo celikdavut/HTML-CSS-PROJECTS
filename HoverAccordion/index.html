@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Accordion</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            background: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .accordion {
+            width: 500px;
+            height: auto;
+            background: blueviolet;
+            padding: 8px;
+            margin: 10px auto;
+            cursor: pointer;
+            border-radius: 2px;
+            color: white;
+            transition: all 1s ease-in-out;
+        }
+
+        .accordion .accordion-content {
+            height: 40px;
+            background-color: violet;
+            margin-top: 10px;
+            text-align: center;
+            padding: 10px;
+            display: none;
+            visibility: hidden;
+            color: black;
+        }
+
+        .accordion:hover .accordion-content {
+            display: block;
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="accordion">
+        Lorem ipsum dolor sit amet1.
+        <div class="accordion-content">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, tenetur. Lorem, ipsum dolor.
+        </div>
+    </div>
+    <div class="accordion">
+        Lorem ipsum dolor sit amet2.
+        <div class="accordion-content">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, tenetur. Lorem ipsum dolor sit amet.
+        </div>
+    </div>
+    <div class="accordion">
+        Lorem ipsum dolor sit amet3.
+        <div class="accordion-content">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, tenetur. Lorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Assumenda.
+        </div>
+    </div>
+</body>
+
+</html>

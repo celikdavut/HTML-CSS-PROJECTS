@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Neon Button</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to top left, blueviolet, yellowgreen);
+        }
+
+        button {
+            position: relative;
+            width: 13rem;
+            height: 5rem;
+            border: none;
+            border-radius: .7rem;
+            background-color: rgb(17, 46, 47);
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: .5s;
+        }
+
+        button:active {
+            transform: scale(.8) rotate(-365deg);
+            background-image: linear-gradient(to bottom right, gold, red);
+        }
+    </style>
+</head>
+
+<body>
+    <button>Button</button>
+</body>
+
+</html>

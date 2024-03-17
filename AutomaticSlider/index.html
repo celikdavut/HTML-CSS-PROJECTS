@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Slider</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-slider {
+            width: 80%;
+            height: 80%;
+            background-size: 100% 100%;
+            box-shadow: 20px 20px 10px rgb(192, 48, 48);
+            animation: slider 9s linear infinite;
+        }
+
+        @keyframes slider {
+            0% {
+                background-image: url(img/img1.jpg);
+            }
+
+            25% {
+                background-image: url(img/img2.jpg);
+            }
+
+            50% {
+                background-image: url(img/img3.jpg);
+            }
+
+            75% {
+                background-image: url(img/img4.jpg);
+            }
+
+            100% {
+                background-image: url(img/img5.jpg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-slider"></div>
+</body>
+
+</html>

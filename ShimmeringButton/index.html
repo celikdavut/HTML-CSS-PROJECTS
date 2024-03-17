@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shimmering Button</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            border: none;
+            color: white;
+            padding: .5rem 1rem;
+            border-radius: .25rem;
+            background-color: darkblue;
+            background-image: linear-gradient(-60deg,
+                    transparent 0%, transparent 40%,
+                    #ffffff40 40%, #ffffff40 60%,
+                    transparent 60%, transparent 100%);
+            background-size: 200% 100%;
+            background-repeat: no-repeat;
+            background-position-x: 150%;
+            transition: 1s;
+        }
+
+        button:hover {
+            background-position-x: -150%;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Button</button>
+</body>
+
+</html>

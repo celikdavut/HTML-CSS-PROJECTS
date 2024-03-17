@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Underline Hover Effect</title>
+    <style>
+        *{margin: 0;}
+        body{
+            background: #000;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .text{
+            width: 20rem;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+            color: rgb(104, 184, 184);
+            padding: .5rem;
+            font-size: 2rem;
+        }
+        .text::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: gold;
+            border-radius: 1rem;
+            transform: scaleX(0);
+            transition: 1s ease-in-out;
+        }
+        .text:hover::after{transform: scaleX(1);}
+    </style>
+</head>
+<body>
+    <h2 class="text">Full Stack Developer</h2>
+</body>
+</html>

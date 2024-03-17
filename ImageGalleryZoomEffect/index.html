@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery Zoom Effect</title>
+    <style>
+        body {
+            background: #000;
+            padding: .5rem 3rem;
+        }
+
+        .gallery {
+            display: flex;
+            width: 30%;
+            height: 15rem;
+            gap: .5rem;
+        }
+
+        .gallery>img {
+            width: 15%;
+            height: 15rem;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border: 2px solid springgreen;
+            border-radius: 5px;
+            box-shadow: 1px 1px 3px blue;
+            transition: all ease .7s;
+            cursor: pointer;
+        }
+
+        .gallery>img:hover {
+            width: 100%;
+            scale: 1.1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gallery">
+        <img src="img/img1.jpg" alt="">
+        <img src="img/img2.jpg" alt="">
+        <img src="img/img3.jpg" alt="">
+        <img src="img/img4.jpg" alt="">
+    </div>
+</body>
+
+</html>

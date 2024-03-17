@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shining Text Effect</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        p {
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            background: linear-gradient(90deg, #000, #fff, #000);
+            letter-spacing: 5px;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-repeat: no-repeat;
+            background-size: 80%;
+            animation: anim 5s linear infinite;
+            position: relative;
+        }
+
+        @keyframes anim {
+            0% {
+                background-position-x: -500%;
+            }
+
+            100% {
+                background-position-x: 500%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <p>Software</p>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Animation</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            background: linear-gradient(to bottom, rgb(56, 56, 56), rgb(0, 0, 0));
+        }
+
+        nav {
+            width: 550px;
+            height: 50px;
+            position: relative;
+            background: #222;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav a {
+            position: relative;
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 0 23px;
+            z-index: 1;
+        }
+
+        nav span {
+            width: 95px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: yellowgreen;
+            border-radius: 8px;
+            transition: .5s;
+        }
+
+        nav a:nth-child(1):hover~span {
+            left: 0;
+        }
+
+        nav a:nth-child(2):hover~span {
+            left: 89px;
+        }
+
+        nav a:nth-child(3):hover~span {
+            left: 179px;
+        }
+
+        nav a:nth-child(4):hover~span {
+            left: 279px;
+        }
+
+        nav a:nth-child(5):hover~span {
+            left: 369px;
+        }
+
+        nav a:nth-child(6):hover~span {
+            left: 455px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Store</a>
+        <a href="#">Products</a>
+        <a href="#">Service</a>
+        <a href="#">About</a>
+        <a href="#">Login</a>
+        <span></span>
+    </nav>
+</body>
+
+</html>

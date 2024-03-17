@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Animation 2</title>
+    <style>
+        body{
+            background: #000;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .circle{
+            width: 5rem;
+            height: 5rem;
+            border: 2px solid azure;
+            border-radius: 50%;
+            animation: x 2s linear infinite;
+            position: relative;
+        }
+        .circle::before{
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1.3rem;
+            height: 1.3rem;
+            border-radius: 50%;
+            background: #9ae932;
+            box-shadow: 0 0 20px #9ae932 , 0 0 60px #9ae932;
+        }
+        @keyframes x {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="circle"></div>
+</body>
+</html>

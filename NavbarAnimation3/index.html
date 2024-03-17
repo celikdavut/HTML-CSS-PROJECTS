@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Animation 3</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #000;
+        }
+
+        nav a {
+            position: relative;
+            color: #333;
+            text-decoration: none;
+            padding: .5rem 1.25rem;
+            transition: .5s;
+        }
+
+        nav a:hover {
+            text-shadow: 0 0 10px gold;
+            color: gold;
+        }
+
+        nav a span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            border-bottom: 2px solid gold;
+            border-radius: 1rem;
+            transform: scale(0) translateY(50px);
+            transition: .5s;
+        }
+
+        nav a:hover span {
+            transform: scale(1) translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="">Home <span></span></a>
+        <a href="">About <span></span></a>
+        <a href="">Services <span></span></a>
+        <a href="">Team <span></span></a>
+        <a href="">Contact <span></span></a>
+    </nav>
+</body>
+
+</html>

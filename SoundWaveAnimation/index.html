@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound Wave Animation</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            width: 60px;
+            height: 40px;
+        }
+
+        .loading div {
+            width: 10px;
+            height: 6px;
+            display: block;
+            border-radius: 8px;
+            background: orange;
+            animation: anim 2.2s infinite ease-in-out;
+        }
+
+        .loading div:nth-child(2) {
+            left: 11px;
+            animation-delay: .2s;
+        }
+
+        .loading div:nth-child(3) {
+            left: 22px;
+            animation-delay: .4s;
+        }
+
+        .loading div:nth-child(4) {
+            left: 33px;
+            animation-delay: .6s;
+        }
+
+        .loading div:nth-child(5) {
+            left: 44px;
+            animation-delay: .8s;
+        }
+
+        .loading div:nth-child(5) {
+            left: 55px;
+            animation-delay: 1s;
+        }
+
+        @keyframes anim {
+            0% {
+                height: 6px;
+                transform: translateY(0px);
+                background: #51e46c;
+            }
+
+            25% {
+                height: 40px;
+                transform: translateY(-5px) scaleY(1.7);
+                background: #ee4398;
+            }
+
+            50% {
+                height: 6px;
+                transform: translateY(0px);
+                background: #241548;
+            }
+
+            100% {
+                height: 6px;
+                transform: translateY(0px);
+                background: #0d3b51;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loading">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>

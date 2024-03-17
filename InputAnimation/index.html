@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Animation</title>
+    <style>
+        body{
+            height: 100vh;
+            background-color: aqua;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .container{
+            position: relative;
+        }
+        .container input{
+            color: #565656;
+            background: none;
+            padding: .7rem;
+            border: 2px solid #030104;
+            border-radius: .2rem;
+        }
+        .container:focus-within input{
+            box-shadow: 1px 1px 5px gold;
+        }
+        .container label{
+            position: absolute;
+            top: 0;
+            left: 0;
+            translate: .7rem .7rem;
+            color: #030104;
+            background-color: aqua;
+            padding: 0 .25rem;
+            border: 2px solid transparent;
+            border-radius: .2rem;
+            transition: .3s;    
+        }
+        .container:focus-within label,
+        .container:not(:has(:placeholder-shown)) label {
+            translate: .625rem -.7rem;
+            border-color: #030104;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">   
+        <input type="text" placeholder="...">
+        <label for="username">Username</label>    
+    </div>
+    <div class="container">
+        <input type="text" placeholder="...">
+        <label for="password">Password</label>
+    </div>
+</body>
+</html>

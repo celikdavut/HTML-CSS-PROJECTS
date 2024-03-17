@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Glowing Heart</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .heart {
+            width: 70px;
+            height: 70px;
+            background-color: #f20044;
+            position: relative;
+            rotate: -45deg;
+            box-shadow: -10px 10px 90px #f20044;
+            animation: anim 1s linear infinite;
+        }
+
+        .heart::before {
+            content: "";
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            background: #f20044;
+            top: -50%;
+            border-radius: 50px;
+            box-shadow: -10px 10px 90px #f20044;
+        }
+
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            background: #f20044;
+            right: -50%;
+            border-radius: 50px;
+            box-shadow: -10px 10px 90px #f20044;
+        }
+
+        @keyframes anim {
+            0% {
+                scale: 1.2;
+            }
+
+            50% {
+                scale: 1;
+            }
+
+            100% {
+                scale: 0.8;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heart"></div>
+</body>
+
+</html>

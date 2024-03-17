@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Animation</title>
+    <style>
+        body {
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        button {
+            border: none;
+            background: transparent;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: bold;
+            position: relative;
+            cursor: pointer;
+            padding: .5rem 1rem;
+        }
+
+        button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 50px;
+        }
+
+        button::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            border-radius: 50px;
+        }
+
+        button::after,
+        button::before {
+            content: "";
+            width: 0%;
+            height: 2px;
+            background: cadetblue;
+            display: block;
+            transition: .3s;
+        }
+
+        button:hover::after,
+        button:hover::before {
+            width: 100%;
+        }
+
+        button:hover {
+            text-shadow: 0 0 10px yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Button</button>
+</body>
+
+</html>

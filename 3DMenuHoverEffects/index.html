@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Menu Hover Effects</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        body{
+            background: #2f8099;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        ul{
+            width: 84rem;
+            height: 11.5rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background: #fff;
+            display: flex;
+        }
+        ul li{
+            width: 100%;
+            display: inline-block;
+            transform-style: preserve-3d;
+        }
+        ul li a{
+            color: #171819;
+            font-size: 2rem;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+        }
+        ul li a div::before{
+            content: attr(title);
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #2f8099;
+            color: #fff;
+            padding: 3.5vw;
+            transition: .2s;
+            transform: rotateX(90deg) translateY(8vw);
+            transform-origin: bottom;
+        }
+        ul li a div:hover::before{
+            transform: rotateX(0deg) translateY(0vw);
+        }
+        ul li a div::after{
+            content: attr(title);
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #fff;
+            color: #171810;
+            padding: 3.5vw;
+            transition: .2s;
+            transform: rotateX(0deg) translateY(0vw);
+            transform-origin: top;
+        }
+        ul li a div:hover::after{
+            transform: rotateX(90deg) translateY(-2vw);
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href=""><div title="HOME">HOME</div></a></li>
+        <li><a href=""><div title="ABOUT">ABOUT</div></a></li>
+        <li><a href=""><div title="SERVICES">SERVICES</div></a></li>
+        <li><a href=""><div title="CONTACT">CONTACT</div></a></li>
+    </ul>
+</body>
+</html>

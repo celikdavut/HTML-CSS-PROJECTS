@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Dropdown Menu</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            background-color: aqua;
+        }
+
+        a {
+            text-decoration: none;
+            padding: .5rem 1.5rem;
+            font-size: 1.1rem;
+            color: black;
+        }
+
+        .menu {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: aliceblue;
+            padding: .8rem 0;
+        }
+
+        .menu-item {
+            position: relative;
+        }
+
+        .menu-item a:hover {
+            background-color: blue;
+            color: rgb(240, 189, 126);
+        }
+
+        .dropMenu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 0;
+        }
+
+        .dropMenu a {
+            background-color: red;
+            color: aqua;
+        }
+
+        .menu-item:hover .dropMenu {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="menu">
+        <div class="menu-item">
+            <a href="">Home</a>
+        </div>
+        <div class="menu-item">
+            <a href="">Services</a>
+            <div class="dropMenu">
+                <a href="">Graphic Design</a>
+                <a href="">Web Design</a>
+                <a href="">Python Programming</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <a href="">Blog</a>
+        </div>
+    </nav>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Shine Effect</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            position: relative;
+            border: none;
+            padding: .8rem 2.5rem;
+            font-size: 1.2rem;
+            transition: .4s ease-in;
+            z-index: 1;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        button:after {
+            position: absolute;
+            content: "";
+            z-index: -1;
+            height: 100%;
+            left: -20.3%;
+            top: 0;
+            transform: skew(50deg);
+            transition-duration: .6s;
+            transform-origin: topleft;
+            width: 0;
+        }
+
+        button:hover::after {
+            background: #093e0b;
+            height: 100%;
+            width: 142%;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Button</button>
+</body>
+
+</html>

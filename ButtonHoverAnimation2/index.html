@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Hover Animation 2</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            border: none;
+            background: #ffc744;
+            padding: 1rem 1.9rem;
+            color: rgb(124, 34, 34);
+            border-radius: .4rem;
+            transition: .2s;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            box-shadow: 0 0 0 4px #000,
+                0 0 0 8px #ffc744;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Hover</button>
+</body>
+
+</html>

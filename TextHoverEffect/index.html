@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Hover Effect</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .button {
+            position: relative;
+            background: transparent;
+            color: transparent;
+            border: none;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+            font-size: 2rem;
+            font-weight: bold;
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
+        }
+
+        .hover-text {
+            position: absolute;
+            color: #37FF8B;
+            width: 0%;
+            inset: 0;
+            overflow: hidden;
+            border-right: 4px solid #37FF8B;
+            transition: .7s;
+            -webkit-text-stroke: 1px #37FF8B;
+        }
+
+        .button:hover .hover-text {
+            width: 100%;
+            filter: drop-shadow(0 0 23px #37FF8B);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="button">
+        <span>&nbsp;HOVER&nbsp;</span>
+        <span class="hover-text">&nbsp;HOVER&nbsp;</span>
+    </button>
+
+</body>
+
+</html>

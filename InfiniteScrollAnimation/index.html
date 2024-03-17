@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Scroll Animation</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tag-list {
+            width: 30rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .inner {
+            width: fit-content;
+            display: flex;
+            gap: 1rem;
+            animation: loop 5s linear infinite;
+        }
+
+        .tag {
+            display: flex;
+            align-items: center;
+            gap: 0 0.2rem;
+            color: #e93c1a;
+            font-size: .9rem;
+            background-color: #cef069;
+            padding: .7rem 1rem;
+            border-radius: .4rem;
+
+        }
+
+        .tag span {
+            font-size: 1.2rem;
+            color: #e93c1a;
+        }
+
+        @keyframes loop {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tag-list">
+        <div class="inner">
+            <div class="tag"><span>#</span>CSS</div>
+            <div class="tag"><span>#</span>Bootstrap</div>
+            <div class="tag"><span>#</span>Tailwind</div>
+            <div class="tag"><span>#</span>React</div>
+            <div class="tag"><span>#</span>UI/UX</div>
+            <div class="tag"><span>#</span>CSS</div>
+            <div class="tag"><span>#</span>Bootstrap</div>
+            <div class="tag"><span>#</span>Tailwind</div>
+            <div class="tag"><span>#</span>React</div>
+            <div class="tag"><span>#</span>UI/UX</div>
+            <div class="fade"></div>
+        </div>
+    </div>
+</body>
+
+</html>

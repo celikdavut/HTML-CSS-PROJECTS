@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Animation</title>
+    <style>
+        body{
+            height: 100vh;
+            background-color: #170224;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .Loading{
+            width: 6rem;
+            height: 6rem;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top: .7rem dotted rgb(80, 255, 249);
+            animation: loading .5s infinite linear;
+        }
+        @keyframes loading{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="Loading"></div>
+</body>
+</html>

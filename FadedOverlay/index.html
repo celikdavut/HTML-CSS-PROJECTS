@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faded Overlay</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            width: 30rem;
+            overflow: hidden;
+            display: grid;
+            grid-template-areas: "first";
+        }
+
+        .card>* {
+            grid-area: first;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card>figcaption {
+            display: grid;
+            align-items: end;
+            padding: 1.5rem 2rem;
+            background-image: linear-gradient(to bottom,
+                    rgb(33 44 55 / 0),
+                    rgb(33 44 55 /0),
+                    rgb(33 44 55 / 0.75));
+        }
+
+        .card figcaption {
+            font-size: 2rem;
+            font-weight: bold;
+            color: blue;
+            opacity: 0;
+            transition: opacity .3s;
+        }
+
+        .card:hover figcaption {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <figure class="card">
+        <img src="bird.jpg" alt="">
+        <figcaption>BİRD</figcaption>
+    </figure>
+</body>
+
+</html>
